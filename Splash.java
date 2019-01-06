@@ -12,7 +12,7 @@ public class Splash implements GameInterface {
     
  
     @Override
-    public void startPressed() {
+    public void start() {
         System.out.println("X ist am Zug!");
         c.setState(c.getXZug());
     }
@@ -26,7 +26,7 @@ public class Splash implements GameInterface {
     }
 
     @Override
-    public void endePressed() {
+    public void end() {
         }
 
 }

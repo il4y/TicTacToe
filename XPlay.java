@@ -10,7 +10,7 @@ public class XPlay implements GameInterface {
     }
 
     @Override
-    public void startPressed() {
+    public void start() {
     }
 
     @Override
@@ -40,6 +40,6 @@ public class XPlay implements GameInterface {
     }
 
     @Override
-    public void endePressed() {
+    public void end() {
     }
 }

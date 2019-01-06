@@ -10,7 +10,7 @@ public class Ende implements GameInterface {
     }
 
     @Override
-    public void startPressed() {
+    public void start() {
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Ende implements GameInterface {
     }
 
     @Override
-    public void endePressed() {
+    public void end() {
         System.out.println("Für ein neues Spiel bitte Taste drücken!");
         c.getWorld().initGameWorld();
         c.setState(c.splash);

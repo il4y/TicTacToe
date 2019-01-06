@@ -4,25 +4,25 @@
 public class GameContext {
 
     GameInterface splash;
-    GameInterface XPlay;
-    GameInterface OZug;
-    GameInterface gewonnen;
+    GameInterface xPlay;
+    GameInterface oPlay;
+    GameInterface win;
     GameInterface current;
-    GameWorld world;
+    GameWorld gameWorld;
 
  
     public GameContext() {
         splash = new Splash(this);
-        XPlay = new XPlay(this);
-        OZug = new OPlay(this);
-        gewonnen = new Ende(this);
+        xPlay = new XPlay(this);
+        oPlay = new OPlay(this);
+        win = new Ende(this);
         current = splash;
 
-        world = new GameWorld();
+        gameWorld = new GameWorld();
     }
 
     public GameWorld getWorld() {
-        return world;
+        return gameWorld;
     }
 
     
@@ -32,23 +32,40 @@ public class GameContext {
     }
 
     public GameInterface getXZug() {
-        return XPlay;
+        return xPlay;
     }
 
     public GameInterface getOZug() {
-        return OZug;
+        return oPlay;
     }
 
     public GameInterface getGewonnen() {
-        return gewonnen;
+        return win;
     }
 
     public void setState(GameInterface g) {
         current = g;
     }
 
-    public void startPressed() {
-        current.startPressed();
+    void choice() {
+        if (current == this.splash) {
+            current.start();
+        } else {
+            current.end();
+        }
+    }
+
+    void Turn(int i) {
+        if (current == this.XZug) {
+            current.XTurn(i);
+        } else {
+            current.OTurn(i);
+        }
+    }
+
+
+    public void start() {
+        current.start();
 
     }
 
@@ -60,26 +77,9 @@ public class GameContext {
         current.OTurn(n);
     }
 
-    public void endePressed() {
-        current.endePressed();
+    public void end() {
+        current.end();
     }
 
-    
-
-    void Turn(int i) {
-        if (current == this.XZug) {
-            current.XTurn(i);
-        } else {
-            current.OTurn(i);
-        }
-    }
-
-    void pressed() {
-        if (current == this.splash) {
-            current.startPressed();
-        } else {
-            current.endePressed();
-        }
-    }
     
 }

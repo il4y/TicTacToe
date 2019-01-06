@@ -5,6 +5,14 @@ public class GameWorld{
         this.initGameWorld();
     }
 
+    public void initGameWorld() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                gameWorld[i][j] = "#";
+            }
+        }
+    }
+
     public void printGameWorld(){
         System.out.println("Game World: ");
         for (int i = 0; i < 3; i++) {
@@ -13,6 +21,17 @@ public class GameWorld{
             }
             System.out.println(" ");
         }
+    }
+
+    public boolean isDraw() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (gameWorld[j][i].equals("#")) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public boolean setGameWorld(String x, int n) {
@@ -80,17 +99,6 @@ public class GameWorld{
         return true;
     }
 
-    public boolean isDraw() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (gameWorld[j][i].equals("#")) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
     public boolean gameWon(String s) {
         if (gameWorld[0][0].equals(s) && gameWorld[1][0].equals(s) && gameWorld[2][0].equals(s)) {
             return true;
@@ -122,11 +130,4 @@ public class GameWorld{
         return false;
     }
 
-    public void initGameWorld() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                gameWorld[i][j] = "#";
-            }
-        }
-    }
 }

@@ -18,7 +18,7 @@ public class Main {
                 g.Turn(i);
 
             } catch (Exception e) {
-                g.pressed();
+                g.choice();
             }
         }
     }
