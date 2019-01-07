@@ -34,7 +34,11 @@ public class OPlay implements GameInterface {
         }
     }
     @Override
-    public void turns() {
+    public void splash() {
+        
+    }
+    @Override
+    public void end() {
         
     }
 }

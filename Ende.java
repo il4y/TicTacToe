@@ -10,13 +10,18 @@ public class Ende implements GameInterface {
     }
 
     @Override
+    public void splash() {
+        
+    }
+
+    @Override
     public void turns(int n) {
         
     }
 
     @Override
-    public void turns() {
-        System.out.println("Für ein neues Spiel bitte Taste drücken!");
+    public void end() {
+        System.out.println("Fuer ein neues Spiel bitte Taste druecken!");
         c.getWorld().initGameWorld();
         c.setState(c.splash);
     }

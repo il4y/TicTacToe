@@ -1,6 +1,8 @@
 public interface GameInterface {
     
-    public void turns();    
+    public void splash();    
     public void turns(int n);
+    public void end();      
+    
    
 }

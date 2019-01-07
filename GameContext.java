@@ -49,8 +49,10 @@ public class GameContext {
 
     void choice() {
         if (current == this.splash) {
-            current.turns();
-        } 
+            current.splash();
+        } else {
+            current.end();
+        }
     }
 
     void Turn(int i) {
@@ -63,7 +65,7 @@ public class GameContext {
 
 
     public void start() {
-        current.turns();
+        current.splash();
 
     }
 
@@ -76,7 +78,7 @@ public class GameContext {
     }
 
     public void end() {
-        current.turns();
+        current.end();
     }
 
     
