@@ -17,7 +17,7 @@ public class XPlay implements GameInterface {
     public void XTurn(int i) {
         if (c.getWorld().setGameWorld("X", i)) {
             c.getWorld().printGameWorld();
-            if (c.getWorld().won("X")) {
+            if (c.getWorld().gameWon("X")) {
                 System.out.println("X hat gewonnen!");
                 c.setState(c.getGewonnen());
             }

@@ -1,3 +1,6 @@
+import java.util.Optional;
+import java.util.OptionalInt;
+
 /**
  * OPlay
  */
@@ -21,7 +24,7 @@ public class OPlay implements GameInterface {
     public void OTurn(int i) {
        if (c.getWorld().setGameWorld("O", i)) {
             c.getWorld().printGameWorld();
-            if (c.getWorld().won("O")) {
+            if (c.getWorld().gameWon("O")) {
                 System.out.println("O hat gewonnen!");
                 c.setState(c.getGewonnen());
             }

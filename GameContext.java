@@ -56,7 +56,7 @@ public class GameContext {
     }
 
     void Turn(int i) {
-        if (current == this.XZug) {
+        if (current == this.xPlay) {
             current.XTurn(i);
         } else {
             current.OTurn(i);
