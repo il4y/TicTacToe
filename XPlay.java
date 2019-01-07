@@ -9,12 +9,7 @@ public class XPlay implements GameInterface {
         c = gameContext;
     }
 
-    @Override
-    public void start() {
-    }
-
-    @Override
-    public void XTurn(int i) {
+    public void turns(int i) {
         if (c.getWorld().setGameWorld("X", i)) {
             c.getWorld().printGameWorld();
             if (c.getWorld().gameWon("X")) {
@@ -36,10 +31,7 @@ public class XPlay implements GameInterface {
     }
 
     @Override
-    public void OTurn(int i) {
-    }
-
-    @Override
-    public void end() {
+    public void turns() {
+        
     }
 }

@@ -13,16 +13,8 @@ public class OPlay implements GameInterface {
     }
 
     @Override
-    public void start() {
-    }
-
-    @Override
-    public void XTurn(int n) {
-    }
-
-    @Override
-    public void OTurn(int i) {
-       if (c.getWorld().setGameWorld("O", i)) {
+    public void turns(int i) {
+        if (c.getWorld().setGameWorld("O", i)) {
             c.getWorld().printGameWorld();
             if (c.getWorld().gameWon("O")) {
                 System.out.println("O hat gewonnen!");
@@ -41,8 +33,8 @@ public class OPlay implements GameInterface {
             System.out.println("Feld "+ i +" belegt, O ist weiter am Zug!");
         }
     }
-
     @Override
-    public void end() {
+    public void turns() {
+        
     }
 }

@@ -49,36 +49,34 @@ public class GameContext {
 
     void choice() {
         if (current == this.splash) {
-            current.start();
-        } else {
-            current.end();
-        }
+            current.turns();
+        } 
     }
 
     void Turn(int i) {
         if (current == this.xPlay) {
-            current.XTurn(i);
+            current.turns(i);
         } else {
-            current.OTurn(i);
+            current.turns(i);
         }
     }
 
 
     public void start() {
-        current.start();
+        current.turns();
 
     }
 
     public void XTurn(int n) {
-        current.XTurn(n);
+        current.turns(n);
     }
 
     public void OTurn(int n) {
-        current.OTurn(n);
+        current.turns(n);
     }
 
     public void end() {
-        current.end();
+        current.turns();
     }
 
     

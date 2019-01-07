@@ -12,21 +12,13 @@ public class Splash implements GameInterface {
     
  
     @Override
-    public void start() {
+    public void turns() {
         System.out.println("X ist am Zug!");
         c.setState(c.getXZug());
     }
 
     @Override
-    public void XTurn(int n) {
+    public void turns(int n) {
+        
     }
-
-    @Override
-    public void OTurn(int n) {
-    }
-
-    @Override
-    public void end() {
-        }
-
 }
